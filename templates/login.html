@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OilSense | Login</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body class="login-body">
+
+<div class="login-bg"></div>
+
+<div class="login-overlay">
+
+<div class="login-card">
+
+<div class="logo-section">
+
+<img src="{{ url_for('static', filename='images/iocl_logo.jpg') }}" class="logo">
+
+<h1>OilSense</h1>
+
+<p>AI-Based Crude Oil Refinery Equipment Monitoring System</p>
+
+</div>
+
+<form action="/login" method="POST">
+
+<div class="input-box">
+
+<i class="fa-solid fa-user"></i>
+
+<input
+type="text"
+name="username"
+placeholder="Username"
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+name="password"
+placeholder="Password"
+required>
+
+</div>
+
+{% if error %}
+
+<div class="error-box">
+
+{{ error }}
+
+</div>
+
+{% endif %}
+
+<button type="submit" class="login-btn">
+
+<i class="fa-solid fa-right-to-bracket"></i>
+
+Login
+
+</button>
+
+</form>
+<div class="login-footer">
+
+    <hr>
+
+    <h3>Indian Oil Corporation Limited</h3>
+
+    <p>OilSense AI Monitoring Platform</p>
+
+    <p>Version 1.0 | Industrial AI Dashboard</p>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
